@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selamat Datang</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      width:100%;
+      height:100vh;
+      overflow:hidden;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:
+      radial-gradient(circle at center, #5b0017 0%, #2a000c 45%, #120006 100%);
+      font-family:'Poppins', sans-serif;
+      position:relative;
+    }
+
+    body::before{
+      content:'';
+      position:absolute;
+      width:600px;
+      height:600px;
+      background:radial-gradient(circle, rgba(255,0,76,0.18), transparent 70%);
+      filter:blur(40px);
+    }
+
+    .container{
+      text-align:center;
+      z-index:2;
+      max-width:900px;
+      padding:20px;
+      animation:fadeUp 1.5s ease;
+    }
+
+    .top-text{
+      font-size:13px;
+      letter-spacing:6px;
+      color:#f2c5cf;
+      margin-bottom:25px;
+    }
+
+    h1{
+      font-family:'Cormorant Garamond', serif;
+      font-size:110px;
+      font-weight:400;
+      line-height:1;
+      color:#fff7f8;
+    }
+
+    .subtitle{
+      font-family:'Cormorant Garamond', serif;
+      font-size:85px;
+      font-style:italic;
+      font-weight:300;
+      color:#e7a7b5;
+      margin-top:-10px;
+    }
+
+    .line{
+      width:70px;
+      height:1px;
+      background:#d9a3af;
+      margin:35px auto;
+    }
+
+    .desc{
+      color:#d7b7bf;
+      line-height:2;
+      font-size:18px;
+      margin-bottom:50px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:18px 55px;
+      border:1px solid rgba(255,255,255,0.35);
+      border-radius:50px;
+      color:#fff;
+      text-decoration:none;
+      letter-spacing:4px;
+      font-size:14px;
+      transition:0.4s;
+      backdrop-filter:blur(5px);
+    }
+
+    .btn:hover{
+      background:rgba(255,255,255,0.12);
+      transform:translateY(-3px);
+      box-shadow:0 0 25px rgba(255,255,255,0.15);
+    }
+
+    .circle1,
+    .circle2{
+      position:absolute;
+      border-radius:50%;
+    }
+
+    .circle1{
+      width:40px;
+      height:40px;
+      border:1px solid rgba(255,255,255,0.3);
+      top:100px;
+      left:35%;
+    }
+
+    .circle2{
+      width:14px;
+      height:14px;
+      background:rgba(0,0,0,0.35);
+      top:95px;
+      left:33%;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:65px;
+      }
+
+      .subtitle{
+        font-size:50px;
+      }
+
+      .desc{
+        font-size:15px;
+      }
+
+      .btn{
+        padding:15px 35px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+
+  <div class="container">
+
+    <div class="top-text">
+      ✦ KHUSUS UNTUK KAMU SAYANGG ✦
+    </div>
+
+    <h1>Selamat Datang</h1>
+
+    <div class="subtitle">
+      Buat Pacar Akuuu Yang Akuu
+    </div>
+
+    <div class="line"></div>
+
+    <div class="desc">
+      Ada sesuatu yang ingin aku ceritakan.<br>
+      Bukan di pesan singkat, bukan di caption foto.<br>
+      Tapi di sini — tempat yang aku buat khusus untukmu.
+    </div>
+
+    <!-- TOMBOL PINDAH -->
+    <a href="teks.html" class="btn">
+      BUKA HADIAH INI ↓
+    </a>
+
+  </div>
+
+</body>
+</html>

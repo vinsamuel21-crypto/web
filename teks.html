@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Surat Untuk Kamu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#ece6df;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  padding:30px;
+  font-family:'Cormorant Garamond', serif;
+}
+
+/* KOTAK SURAT */
+
+.letter-box{
+  width:750px;
+  background:#f5f0eb;
+  padding:70px 70px 60px;
+  border-radius:6px;
+  position:relative;
+  box-shadow:0 10px 30px rgba(0,0,0,0.04);
+}
+
+/* TANDA PETIK */
+
+.quote{
+  position:absolute;
+  top:25px;
+  left:45px;
+  font-size:90px;
+  color:#e9c3ca;
+  font-weight:bold;
+  line-height:1;
+}
+
+/* ISI TEKS */
+
+.letter-text{
+  color:#b06f72;
+  font-size:23px;
+  line-height:2;
+  font-style:italic;
+  font-weight:400;
+}
+
+/* SPASI ANTAR PARAGRAF */
+
+.paragraph{
+  margin-bottom:55px;
+}
+
+/* TOMBOL */
+
+.button-area{
+  text-align:right;
+}
+
+.next-btn{
+  display:inline-block;
+  text-decoration:none;
+  color:#c27f89;
+  border:1px solid #d9b0b7;
+  padding:12px 28px;
+  border-radius:40px;
+  font-size:15px;
+  letter-spacing:3px;
+  font-family:Arial, sans-serif;
+  transition:0.3s;
+}
+
+.next-btn:hover{
+  background:#e8d6d8;
+  transform:translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .letter-box{
+    width:100%;
+    padding:50px 30px;
+  }
+
+  .quote{
+    font-size:70px;
+    left:25px;
+  }
+
+  .letter-text{
+    font-size:18px;
+    line-height:1.8;
+  }
+
+  .next-btn{
+    font-size:12px;
+    padding:10px 20px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="letter-box">
+
+  <div class="quote">“</div>
+
+  <div class="letter-text">
+
+    <!-- PARAGRAF 1 -->
+    <div class="paragraph">
+      Aku nggak pinter nulis puisi.
+      Nggak jago rangkai kata-kata indah.
+      Tapi kalau ada satu hal yang aku yakin banget,
+      itu adalah — kehadiranmu bikin hidupku lebih
+      berwarna dari yang pernah aku kira mungkin.
+    </div>
+
+    <!-- PARAGRAF 2 -->
+    <div class="paragraph">
+      Makasih udah mau ada.
+      Udah mau dengerin.
+      Udah mau ketawa bareng.
+      Udah mau sabar sama aku yang sering nggak sempurna ini.
+    </div>
+
+    <!-- PARAGRAF 3 -->
+    <div class="paragraph">
+      Semoga kamu tahu seberapa berharganya kamu —
+      bukan cuma buat aku,
+      tapi untuk dunia ini.
+    </div>
+
+  </div>
+
+  <!-- TOMBOL KE HALAMAN BERIKUTNYA -->
+
+  <div class="button-area">
+    <a href="lovee.html" class="next-btn">
+      SELANJUTNYA →
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>

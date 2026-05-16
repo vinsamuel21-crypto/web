@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Programmed Love - Corazon Real</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background-color: #0a0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    perspective: 1000px;
+  }
+  .container {
+    position: relative;
+    width: 700px;
+    height: 520px;
+    transform-style: preserve-3d;
+  }
+  .el_love_word {
+    color: #ee4444;
+    font-size: 1.1rem;
+    font-family: Arial, sans-serif;
+    position: absolute;
+    text-shadow: 0 0 8px #ff3030, 0 0 2px #ff8080;
+    white-space: nowrap;
+    opacity: 0;
+    animation: heart-anim 4s infinite linear;
+  }
+  @keyframes heart-anim {
+    0%   { opacity: 0; transform: translateZ(0px) scale(0.5); }
+    20%  { opacity: 1; transform: translateZ(10px) scale(1); }
+    80%  { opacity: 1; transform: translateZ(10px) scale(1); }
+    100% { opacity: 0; transform: translateZ(0px) scale(0.5); }
+  }
+</style>
+</head>
+<body>
+<div class="container" id="heart-container"></div>
+
+<script>
+  const scale = 9;
+  const offsetX = 340;
+  const offsetY = 260;
+  const container = document.getElementById('heart-container');
+
+  for (let angle = 0; angle < Math.PI * 2; angle += 0.12) {
+    const x = 16 * Math.pow(Math.sin(angle), 3);
+    const y = -(13 * Math.cos(angle) - 5 * Math.cos(2 * angle) - 2 * Math.cos(3 * angle) - Math.cos(4 * angle));
+
+    const span = document.createElement('span');
+    span.className = 'el_love_word';
+    span.textContent = 'I love you';
+    span.style.left = (x * scale + offsetX) + 'px';
+    span.style.top  = (y * scale + offsetY) + 'px';
+    span.style.animationDelay = (Array.from(container.children).length * 0.06) + 's';
+    span.style.fontSize = (0.75 + Math.random() * 0.6) + 'rem';
+
+    const hue = 330 + Math.random() * 40;
+    span.style.color = `hsl(${hue}, 90%, 60%)`;
+    span.style.textShadow = `0 0 8px hsl(${hue}, 90%, 50%), 0 0 2px #ff9090`;
+
+    container.appendChild(span);
+  }
+</script>
+</body>
+</html>
